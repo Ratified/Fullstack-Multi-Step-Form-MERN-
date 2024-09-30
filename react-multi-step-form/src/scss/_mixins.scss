@@ -1,0 +1,12 @@
+@use "variables";
+
+@mixin buttonStyles ($padding, $fontSize, $width) {
+    padding: $padding;
+    font-size: $fontSize;
+    border-radius: 0.5rem;
+    width: $width;
+    background-color: variables.$MarineBlue;
+    color: variables.$White;
+    border: none;
+    cursor: pointer;
+}

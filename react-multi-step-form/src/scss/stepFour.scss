@@ -1,0 +1,31 @@
+@use 'variables';
+
+.choices{
+    background-color: variables.$Magnolia;
+
+    .plan{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .add-ons ul{
+        list-style: none;
+        padding: 1rem 2rem;
+
+        li{
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+    }
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        color: variables.$PurplishBlue;
+    }
+}

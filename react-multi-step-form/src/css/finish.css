@@ -1,0 +1,14 @@
+.finish {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.finish img {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=finish.css.map */

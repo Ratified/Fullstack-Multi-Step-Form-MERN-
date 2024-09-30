@@ -1,0 +1,130 @@
+@use "reset";
+@use "variables";
+@use 'mixins';
+
+body {
+  font-family: variables.$font-family;
+  background: variables.$LightBlue;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background: variables.$White;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  min-height: 100svh;
+  min-width: 400px;
+
+  display: flex;
+  gap: 6rem;
+
+  .navbar {
+    background-image: url("../assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    border-radius: 10px;
+    color: variables.$White;
+    padding: 2rem;
+    letter-spacing: 2px;
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .number {
+        background: transparent;
+        border: 2px solid variables.$White;
+        border-radius: 50%;
+        color: variables.$White;
+        font-size: 1.5rem;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      &-heading_title {
+        text-transform: uppercase;
+
+        .title {
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: variables.$White;
+        }
+      }
+    }
+
+    @media (max-width: 788px) {
+      background-image: url("../assets/images/bg-sidebar-mobile.svg");
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+    .form-heading{
+        display: grid;
+        gap: 1rem;
+
+
+        .form-step_title{
+            font-size: 2rem;
+            font-weight: 700;
+            color: variables.$MarineBlue;
+        }
+    }
+
+    .form-groups{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+    
+          label {
+            font-weight: 600;
+            color: variables.$MarineBlue;
+          }
+    
+          input {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid variables.$Lightgray;
+          }
+
+          .error-message{
+            color: red;
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+        }
+    }
+
+    .form-submitButton{
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+
+        .next-btn{
+            cursor: pointer;
+            @include mixins.buttonStyles(0.5rem 1rem, 1rem, 40%);
+        }
+    }
+}
+
+}

@@ -1,0 +1,74 @@
+@use 'variables';
+
+.add-on{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid variables.$MarineBlue;
+    padding: 2rem 3rem;
+    gap: 3rem;
+    border-radius: 0.5rem;
+
+    .add-on__title{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .add-on__price{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .add-on__description{
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .add-on__button{
+        background-color: #f8f9fa;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover{
+            background-color: #e9ecef;
+        }
+    }
+}
+
+.add-on--selected{
+    background-color: variables.$MarineBlue;
+    color: variables.$White;
+    border: 1px solid variables.$MarineBlue;
+
+    .add-on__button{
+        background-color: variables.$White;
+        color: variables.$MarineBlue;
+        border: 1px solid variables.$MarineBlue;
+    }
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+
+    .form-buttons__button{
+        background-color: variables.$MarineBlue;
+        color: variables.$White;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover{
+            background-color: variables.$CoolGray;
+        }
+    }
+}
